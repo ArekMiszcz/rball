@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://native/Button.gd" type="Script" id=1]
+
+[node name="PanelContainer" type="PanelContainer"]
+margin_right = 384.0
+margin_bottom = 200.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 377.0
+margin_bottom = 193.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 35.0
+margin_top = 62.5
+margin_right = 335.0
+margin_bottom = 76.5
+text = "Nickname"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="Panel"]
+margin_left = 35.0
+margin_top = 81.0
+margin_right = 335.0
+margin_bottom = 105.0
+placeholder_text = "Enter your nickname"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Panel"]
+margin_left = 265.0
+margin_top = 110.0
+margin_right = 335.0
+margin_bottom = 130.0
+disabled = true
+text = "Enter"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

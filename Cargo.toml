@@ -1,0 +1,6 @@
+[workspace]
+exclude = ["godot"]
+members = [
+    "rust/shared",
+    "rust/server"
+]

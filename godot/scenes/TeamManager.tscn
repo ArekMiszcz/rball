@@ -1,0 +1,122 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://native/TeamManager.gd" type="Script" id=1]
+[ext_resource path="res://assets/logo/logo_color.png" type="Texture" id=2]
+[ext_resource path="res://native/TeamManager_StartButton.gd" type="Script" id=3]
+
+[node name="TeamManager" type="PanelContainer"]
+margin_left = 300.0
+margin_top = 200.0
+margin_right = 724.0
+margin_bottom = 524.0
+rect_pivot_offset = Vector2( -852.515, -464.687 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 417.0
+margin_bottom = 317.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 410.0
+margin_bottom = 286.0
+rect_min_size = Vector2( 121, 286 )
+custom_constants/separation = 3
+
+[node name="RedTeamContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 134.0
+margin_bottom = 286.0
+size_flags_horizontal = 3
+
+[node name="RedTeamLabel" type="Label" parent="VBoxContainer/HBoxContainer/RedTeamContainer"]
+margin_right = 134.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Red Team"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/HBoxContainer/RedTeamContainer"]
+margin_top = 18.0
+margin_right = 134.0
+margin_bottom = 22.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer/RedTeamContainer"]
+margin_top = 26.0
+margin_right = 134.0
+margin_bottom = 286.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RedTeam" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/RedTeamContainer/ScrollContainer"]
+margin_right = 134.0
+size_flags_horizontal = 3
+
+[node name="SpecContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 137.0
+margin_right = 272.0
+margin_bottom = 286.0
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer/SpecContainer"]
+margin_right = 135.0
+margin_bottom = 286.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpecTeam" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/SpecContainer/ScrollContainer"]
+margin_right = 135.0
+size_flags_horizontal = 3
+
+[node name="BlueTeamContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 275.0
+margin_right = 410.0
+margin_bottom = 286.0
+size_flags_horizontal = 3
+
+[node name="BlueTeamLabel" type="Label" parent="VBoxContainer/HBoxContainer/BlueTeamContainer"]
+margin_right = 135.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 1, 1 )
+text = "Blue Team"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/HBoxContainer/BlueTeamContainer"]
+margin_top = 18.0
+margin_right = 135.0
+margin_bottom = 22.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer/BlueTeamContainer"]
+margin_top = 26.0
+margin_right = 135.0
+margin_bottom = 286.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlueTeam" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/BlueTeamContainer/ScrollContainer"]
+margin_right = 135.0
+size_flags_horizontal = 3
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+margin_top = 290.0
+margin_right = 410.0
+margin_bottom = 310.0
+text = "Start the match"
+script = ExtResource( 3 )
+
+[node name="logo_color" type="Sprite" parent="."]
+position = Vector2( 212.3, -90.556 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
